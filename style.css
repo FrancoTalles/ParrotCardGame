@@ -20,7 +20,8 @@ body {
 }
 
 .jogo{
-    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 122px;
     margin-top: 47px;
     margin-right: 116px;
@@ -31,6 +32,8 @@ body {
   height: 146px;
   border: 1px solid #99CEA8;
   border-radius: 5px;
+  margin-left: 34px;
+  margin-bottom: 34px;
   background: linear-gradient(0deg, #99cea8, #99cea8),
     linear-gradient(0deg, #a7e9af, #a7e9af);
 }
@@ -39,4 +42,27 @@ body {
   width: 100px;
   height: 100px;
   margin: 24px 7px 22px 10px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 600px){
+    .jogo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 47px auto auto auto;
+    }
+
+    .titulo h1{
+        font-size: 36px;
+        line-height: 42px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
