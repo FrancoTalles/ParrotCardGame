@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eef9bf;
+}
+
+.titulo h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 65px;
+  margin-top: 40px;
+  color: #75b79e;
+}
+
+.jogo{
+    background-color: red;
+    margin-left: 122px;
+    margin-top: 47px;
+    margin-right: 116px;
+}
+
+.carta {
+  width: 117px;
+  height: 146px;
+  border: 1px solid #99CEA8;
+  border-radius: 5px;
+  background: linear-gradient(0deg, #99cea8, #99cea8),
+    linear-gradient(0deg, #a7e9af, #a7e9af);
+}
+
+.carta img {
+  width: 100px;
+  height: 100px;
+  margin: 24px 7px 22px 10px;
+}
