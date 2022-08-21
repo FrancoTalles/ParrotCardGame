@@ -4,6 +4,8 @@ let carta1 = "";
 let carta2 = "";
 let final = 0;
 let jogadas = 0;
+let segundos = 0;
+let intervalo;
 
 iniciarJogo();
 function iniciarJogo() {
@@ -27,6 +29,9 @@ function comparador() {
 function distribuirCartas() {
   final = 0;
   jogadas = 0;
+  segundos = 0;
+  intervalo = undefined;
+  intervalo = setInterval(tempo, 1000);
   let campo = document.querySelector(".jogo");
   campo.innerHTML = "";
   let embaralhadas = [];
@@ -72,7 +77,6 @@ function flipar(elemento) {
 
 function verificador(){
   if (carta1.innerHTML === carta2.innerHTML){
-    alert("iguais");
     carta1 = "";
     carta2 = "";
     final += 2;
@@ -88,19 +92,27 @@ function verificador(){
 
 function ending(){
   if (final === cartas){
+    alert(`Você ganhou em ${jogadas} jogadas e ${segundos} segundos!`);
     finalquestion();
   }
 }
 
 function finalquestion(){
   let perguntafinal = prompt("Quer jogar de novo?");
+  clearInterval(intervalo);
   if (perguntafinal === "sim"){
     iniciarJogo();
   }else if (perguntafinal === "não"){
-    alert(`Você ganhou em ${jogadas} jogadas!`);
+    alert(`Você ganhou em ${jogadas} jogadas e ${segundos} segundos!`);
   }else{
     finalquestion();
   }
+}
+
+function tempo(){
+  segundos++;
+  let cronometro = document.querySelector("span");
+  cronometro.innerHTML = segundos;
 }
 
 

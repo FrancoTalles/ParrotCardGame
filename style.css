@@ -8,6 +8,22 @@ body {
   background-color: #eef9bf;
 }
 
+.titulo span{
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .titulo h1 {
   display: flex;
   justify-content: center;
