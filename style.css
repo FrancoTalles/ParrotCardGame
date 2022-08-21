@@ -103,7 +103,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 47px auto auto auto;
+    margin: 47px auto auto 30px;
   }
 
   .titulo h1 {
@@ -111,5 +111,9 @@ body {
     line-height: 42px;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .titulo span{
+    top: 85px
   }
 }
