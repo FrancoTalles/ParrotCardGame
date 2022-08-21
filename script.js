@@ -98,7 +98,7 @@ function ending(){
 }
 
 function finalquestion(){
-  let perguntafinal = prompt("Quer jogar de novo?");
+  let perguntafinal = prompt("Quer jogar de novo? sim ou não");
   clearInterval(intervalo);
   if (perguntafinal === "sim"){
     iniciarJogo();
