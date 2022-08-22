@@ -58,6 +58,10 @@ function distribuirCartas() {
 }
 
 function flipar(elemento) {
+  if(elemento.classList.contains("flipcard")){
+    return;
+  }
+
   if (carta1 === "") {
     elemento.classList.add("flipcard");
     carta1 = elemento;
