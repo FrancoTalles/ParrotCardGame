@@ -2,7 +2,6 @@ let cartas = 0;
 const baralho = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7];
 let carta1 = "";
 let carta2 = "";
-let final = 0;
 let jogadas = 0;
 let segundos = 0;
 let intervalo;
@@ -27,7 +26,6 @@ function comparador() {
 }
 
 function distribuirCartas() {
-  final = 0;
   jogadas = 0;
   segundos = 0;
   intervalo = undefined;
@@ -79,7 +77,6 @@ function verificador(){
   if (carta1.innerHTML === carta2.innerHTML){
     carta1 = "";
     carta2 = "";
-    final += 2;
     ending();
 
   }else if (carta1 !== carta2){
@@ -91,7 +88,8 @@ function verificador(){
 }
 
 function ending(){
-  if (final === cartas){
+  const protetor = document.querySelectorAll(".flipcard");
+  if (protetor.length === cartas){
     alert(`Você ganhou em ${jogadas} jogadas e ${segundos} segundos!`);
     finalquestion();
   }
